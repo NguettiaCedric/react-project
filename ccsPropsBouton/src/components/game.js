@@ -40,7 +40,7 @@ class Resultat extends Component {
            
           <button onClick={this.changeStates} className="btn btn-primary mt-1">Changer le state</button>
           
-          <Btn >Cliquez ici !</Btn> {/* le btn avec les propriete par defaut */}
+          {/* <Btn >Cliquez ici !</Btn> le btn avec les propriete par defaut */}
           <Btn handelClick={this.changeStates} btnStyle={success}>Texte vert</Btn>
           <Btn btnStyle={danger}>Texte  blanc</Btn>
           <Btn btnStyle={{backgroundColor : "blue"}}>Texte blanc</Btn>
