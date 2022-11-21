@@ -33,7 +33,7 @@ class Resultat extends Component {
 
       return (
 
-        <div>          
+        <>          
           <div className={`alert ${classColor}`} role="alert">
             {result}
           </div>
@@ -46,7 +46,7 @@ class Resultat extends Component {
           <Btn btnStyle={{backgroundColor : "blue"}}>Texte blanc</Btn>
         
         
-        </div>
+        </>
         
       );
 

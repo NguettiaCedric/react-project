@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Btn from "./customBtn";
+import { Container, Button, Alert } from "react-bootstrap";
 
 class Resultat extends Component {
   state = {
@@ -14,7 +15,8 @@ class Resultat extends Component {
 
     const result = this.state.winner ? `Bravo ${this.state.name}` : 'Raté';
     
-    const classColor = this.state.winner ? "alert-success" : "alert-danger";
+    const classColor = this.state.winner ? "success" : "danger";
+    // const classColor = this.state.winner ? "alert-success" : "alert-danger";
     
     const success = {
       backgroundColor : "green",
@@ -33,16 +35,40 @@ class Resultat extends Component {
 
       return (
 
-        <div>  
+        <>  
 
-          <div className={`alert ${classColor}`} role="alert">
+          {/* <div className={`alert ${classColor}`} role="alert">
             {result}
-          </div>
-          <Btn handelClick={this.changeStates} btnStyle={success}>Texte vert</Btn>
-       
+          </div> */}
+
+          {/* <Btn handelClick={this.changeStates} btnStyle={success}>
+            Texte vert
+          </Btn> */}
+
+          <Alert 
+           variant={classColor}
+           className='text-center'
+           >
+            
+            {result}
+          </Alert>
+
+
+          {/* <div className="text-center"> */}
+            <Button
+              onClick={this.changeStates}
+              variant="success"
+              style={{display:'block', margin:'5px auto'}}
+              
+            >
+              change Status
+            </Button>
+        
+          {/* </div> */}
+         
 
        
-        </div>
+        </>
         
       );
 
