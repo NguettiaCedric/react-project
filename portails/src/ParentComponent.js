@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SimpleComponent from './SimpleComponent';
 import PureComp from './PureComponent';
-import FonctionComp from './FonctionComp';
 
 class ParentComponent extends Component {
 
@@ -13,7 +12,7 @@ class ParentComponent extends Component {
         }
       }
       
-      /* shouldComponentUpdate = (nextProps, nextState) => {
+      shouldComponentUpdate = (nextProps, nextState) => {
         console.log(' shouldComponentUpdate() decide true par defaut');
 
         console.log(this.state.name);
@@ -24,7 +23,7 @@ class ParentComponent extends Component {
         // }
     
         return true;
-      } */
+      }
     
       changeToBatman = () => {
         this.setState({
@@ -36,13 +35,8 @@ class ParentComponent extends Component {
         console.log('%c RENDER DU COMPOSANT PARENT!','color:orange')
         return (
         <div>
-             <p>
-              <span className='orange'>Parent Component</span> {this.state.name}
-             </p>
-
-            <SimpleComponent  name={this.state.name} />
+            <SimpleComponent name={this.state.name} />
             <PureComp name={this.state.name} />
-            <FonctionComp name={this.state.name} />
             <button onClick={this.changeToBatman}>Changer en BatMan</button>
         </div>
         )

@@ -11,9 +11,7 @@ class PureComp extends PureComponent {
 
     return (
       <div>
-            <p>
-                <span className='green'>Pure Component</span>  {this.props.name}
-             </p>
+        Bonjour PureComponent
       </div>
     )
   }
