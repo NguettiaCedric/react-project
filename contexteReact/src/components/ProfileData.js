@@ -1,0 +1,26 @@
+import React from "react";
+import ContentData from "./ContentData";
+
+const ProfileData = (props) => {
+    console.log(props)
+  return (
+    <div>
+      <p>
+        <a
+          className="btn btn-primary"
+          data-toggle="collapse"
+          href="#collapseExample"
+          aria-controls="collapseExample"
+        >
+           Informations sur {props.welcome.name} ?
+        </a>
+      </p>
+
+      {/* <ContentData userData={props.welcome} /> */}
+      <ContentData />
+
+    </div>
+  );
+};
+
+export default ProfileData;
