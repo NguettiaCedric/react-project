@@ -1,14 +1,14 @@
 import './App.css';
 import React, { Component } from 'react'
-import Container from './components/Container';
+import Count from './components/Count';
 
 
 class App extends Component {
 
-  render() {
+  render() { 
     return (
-      <div>
-        <Container />
+      <div className='text-center'>
+        <Count />
       </div>
     );
   }
